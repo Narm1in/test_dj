@@ -1,0 +1,23 @@
+{% extends "app5/base.html"%}
+{% block body_blck%}
+
+<div class="container">
+
+    <h1>Please Login</h1>
+
+    <form method="POST" action="{% url 'app5:login' %}">
+   
+          {% csrf_token %}
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username">
+
+          <label for="password"></label>
+          <input type="password" name="password">
+
+          <input type="submit" name="" value="Login">
+
+        </form>
+
+</div>
+
+{% endblock %}
